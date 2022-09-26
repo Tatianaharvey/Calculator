@@ -9,23 +9,33 @@ keys.addEventListener('click', e => {
       let action = key.dataset.action
       const keyContent = key.textContent
       const displayedNum = display.textContent
-     if (!action) {
-        console.log('number key!')
-      } else if (
-    
+      const previousKeyType = calculator.dataset.previousKeyType
+
+      if (!action) {
+        if (displayedNum === '0' || previousKeyType === 'operator') {
+          display.textContent = keyContent
+        } else {
+          display.textContent = displayedNum + keyContent
+        }
+      }
+      if (action === 'decimal') {
+        display.textContent = displayedNum + '.'
+      }
+      if (
         action === 'add' ||
         action === 'subtract' ||
         action === 'multiply' ||
-        action === 'divide' ) {
-        console.log('operator key!')
-      } else if (action === 'decimal') {
-        console.log('decimal key!')
-      } else if (action === 'clear') {
-        console.log('clear key!')
-      } else {
-        (action === 'calculate')
-        console.log('equal key!')
+        action === 'divide' 
+      ) {
+        calculator.dataset.previousKeyType = 'operator'
       }
+    
+      // } else if (action === 'clear') {
+      //   console.log('clear key!')
+      // } else {
+      //   (action === 'calculate')
+      //   console.log('equal key!')
+      // }
 
     }
 })

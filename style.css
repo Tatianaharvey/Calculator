@@ -17,7 +17,7 @@ body {
   }
 
   .display {
-    background-color: #222222;
+    background-image: linear-gradient(to top, #060606, #5c5c5c);
     color: #fff;
     font-size: 1.5em;
     padding: 0.5em 0.75em;
@@ -36,8 +36,9 @@ button {
 }
 
 .key-operator {
-    background-color: rgb(221, 221, 221);
+    background-image: linear-gradient(to bottom, #d6f3ff, #83daff);
 }
+
 .equal-key {
     background-image: linear-gradient(to bottom, #b4ffb4, #98cb6e);
     grid-column: -2;
