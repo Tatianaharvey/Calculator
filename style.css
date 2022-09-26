@@ -1,0 +1,27 @@
+
+
+body {
+    margin: 0;
+    align-items: center;
+    
+}
+
+.keys {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    outline: none;
+    background-color: white;
+}
+
+.key-operator {
+    background-color: rgb(221, 221, 221);
+}
+.equal-key {
+    background-image: linear-gradient(to bottom, #b4ffb4, #98cb6e);
+    grid-column: -2;
+    grid-row: 2 /span 4;
+}
