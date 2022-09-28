@@ -100,10 +100,24 @@ keys.addEventListener('click', e => {
         }
 
     
+      if (action !== 'clear') {
+        const clearButton = calculator.querySelector('[data-action=clear]')
+        clearButton.textContent = 'CE'
+      }
+
       if (action === 'clear') {
-        console.log('clear key!')
+          if (key.textContent === 'AC') {
+            calculator.dataset.firstValue = ''
+            calculator.dataset.modValue = ''
+            calculator.dataset.operator = ''
+            calculator.dataset.previousKeyType = ''
+          } else {
+            key.textContent = 'AC'
+          }
+          display.textContent = 0
         calculator.dataset.previousKeyType = 'clear'
-       }
+      }
+       
 }})
 
 
