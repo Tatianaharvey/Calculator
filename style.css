@@ -19,11 +19,11 @@ body {
   .display {
     background-image: linear-gradient(to top, #a6a3a3, #d0d0d0);
     color: #fff;
-    font-size: 24px;
+    font-size: 34px;
     padding: 0.5em 0.75em;
     text-align: right;
     border-radius: 5px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
 
 .keys {
